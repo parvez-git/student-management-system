@@ -1,0 +1,528 @@
+/*
+ * Base structure
+ */
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px;
+  background-color: #EDEFF5;
+  font-family: 'open_sansregular';
+}
+
+
+/*
+ * Global add-ons
+ */
+
+.sub-header {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+/*
+ * Top navigation
+ * Hide default border to remove 1px line.
+ */
+.navbar-fixed-top {
+  border: 0;
+}
+.navbar-toggle .icon-bar {
+  background-color: #333;
+}
+
+.navbar{
+  background-color: #FFF;
+}
+.navbar-brand{
+  color: #333;
+  text-transform: uppercase;
+}
+.nav>li>a{
+  color: #9a9a9a;
+  text-transform: uppercase;
+}
+.navbar-nav>li>a i{
+  padding-right: 6px;
+}
+.navbar-nav>li{
+  position: relative;
+}
+.navbar-nav>li>a:after{
+  content: "";
+  width: 1px;
+  height: 20px;
+  background-color: #f2f2f2;
+  position: absolute;
+  top: 15px;
+  right: 0;
+}
+.navbar-nav>li:last-child>a:after{
+  content: "";
+  width: 1px;
+  height: 20px;
+  background-color: transparent;
+  position: absolute;
+  top: 15px;
+  right: 0;
+}
+
+.nav>li>a:focus,
+.nav>li>a:hover {
+    color: #54545A;
+    background-color: transparent;
+}
+
+/*
+ * Top Search Form
+ * Hide default style.
+ */
+
+.navbar-form {
+
+}
+@media (min-width: 992px){
+  .col-md-10{
+    border-left: 1px solid #EEE;
+  }
+  .navbar-form .form-control{
+    width: 400px;
+  }
+
+}
+.navbar-form button {
+  color: #FFFFFF;
+  border: 0 solid;
+  background-color: transparent;
+  display: inline-block;
+}
+.navbar-form button:focus {
+  outline: 0;
+}
+.navbar-form .form-control {
+  border: 0 solid;
+  border-radius: 0;
+  box-shadow: none;
+  height: 30px;
+}
+.navbar-form .form-control:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+/*
+ * Sidebar
+ */
+
+/* Hide for mobile, show later */
+.sidebar {
+  display: none;
+}
+@media (min-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 51px;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: block;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+    background-color: #fff;
+    border-right: 1px solid #eee;
+  }
+}
+
+/* Sidebar navigation */
+.nav-sidebar {
+  margin-right: -21px; /* 20px padding + 1px border */
+  margin-bottom: 20px;
+  margin-left: -10px;
+}
+.nav-sidebar > li {
+  text-transform: capitalize;
+  color: #333;
+}
+.nav-sidebar i {
+    padding-right: 10px;
+    color: #777
+}
+.nav-sidebar > li > a {
+  padding-right: 20px;
+  padding-left: 30px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  text-transform: capitalize;
+  color: #555
+}
+.nav-sidebar > li > a:hover {
+  color: #222
+}
+.nav-sidebar > .active > a,
+.nav-sidebar > .active > a:hover,
+.nav-sidebar > .active > a:focus {
+  color: #fff;
+  background-color: #428bca;
+}
+
+.nav-sidebar > a {
+  text-decoration: none;
+  color: #333;
+}
+
+.author-info {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+.author-info img {
+    width: 80px;
+    height: 80px;
+    background: #edeff5;
+    border-radius: 50%;
+    padding: 12px;
+}
+/*
+ * Main content
+ */
+
+.main {
+  padding: 20px;
+}
+@media (min-width: 768px) {
+  .main {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+.main .page-header {
+  margin-top: 0;
+}
+
+
+/*
+ * From dashboard ideas
+ */
+
+.form-container {
+  background-color: #fff;
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.form-horizontal button {
+  color: #FFFFFF;
+  border: 0 solid;
+  border-radius: 0;
+  padding: 8px 24px;
+  background-color: #333;
+}
+.form-horizontal button:hover {
+  color: #f2f2f2;
+  background-color: #333;
+}
+.form-horizontal button:focus {
+  outline: 0;
+}
+.form-horizontal .form-control {
+  border: 1px solid #EEEEEE;
+  border-radius: 0;
+  box-shadow: none;
+}
+.form-horizontal .form-control:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.input-group-addon.plus{
+  cursor: pointer;
+}
+
+.input-group .input-group-addon {
+    background-color: #fff;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    border-right: 1px solid #eee;
+    border-left: 0 solid;
+    border-radius: 0;
+}
+.input-group .input-group-addon.iconfirst {
+    background-color: #fff;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    border-left: 1px solid #eee;
+    border-right: 0 solid;
+    border-radius: 0;
+}
+
+/*
+ * Table dashboard ideas
+ */
+
+.table-container h3{
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+.table-container{
+  background-color: #FFFFFF;
+}
+
+ @media (min-width: 768px) {
+  .table-container{
+    background-color: #FFFFFF;
+    padding: 30px;
+  }
+  .table{
+    border: 1px solid #ddd;
+  }
+/*  .table-container h3 {
+    padding-right: 15px;
+    padding-left: 15px;
+  }*/
+}
+.table>tbody>tr>td,
+.table>tbody>tr>th,
+.table>tfoot>tr>td,
+.table>tfoot>tr>th,
+.table>thead>tr>td,
+.table>thead>tr>th {
+    padding: 8px 12px;
+    font-size: 14px;
+}
+.table>thead:first-child>tr:first-child>th,
+.table>thead>tr>th {
+  border-top: 1px solid #ddd;
+  border-bottom: 0px solid;
+}
+
+/*
+ * Placeholder dashboard ideas
+ */
+
+.placeholders {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.placeholders h4 {
+  margin-bottom: 0;
+}
+.placeholder {
+  margin-bottom: 20px;
+}
+.placeholder img {
+  display: inline-block;
+  border-radius: 50%;
+}
+
+/* ****************************************
+** CUSTOM CSS
+**************************************** */
+.navbar-nav>li>.dropdown-menu {
+    border-radius: 0;
+}
+.modal-content,
+button.btn{
+    border-radius: 0;
+}
+.pagination>li:first-child>a,
+.pagination>li:first-child>span {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+.pagination>li:last-child>a,
+.pagination>li:last-child>span {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+.pagination>li>a,
+.pagination>li>span {
+    color: #333;
+}
+.pagination>.active>a,
+.pagination>.active>a:focus,
+.pagination>.active>a:hover,
+.pagination>.active>span,
+.pagination>.active>span:focus,
+.pagination>.active>span:hover {
+    color: #222;
+    background-color: #dddddd;
+    border-color: #dddddd;
+}
+
+input.submitbtn,
+a.addtopbtn,
+span.addtopbtn {
+    border-radius: 0;
+    border-color: #dadada;
+}
+#edit-tbody tr:hover{
+  cursor: pointer;
+  background-color: #bf5329;
+  color: white;
+}
+#student-courses-show tbody tr:hover{
+  cursor: pointer;
+  background-color: #45b27b;
+  color: white;
+}
+#student-course-btn span.btn{
+  width: 100%;
+}
+
+#courses-popup{
+  z-index: 1100;
+}
+
+#form-student-update .row > div{
+  margin-bottom: 20px;
+}
+#form-student-update .formcontainer{
+  padding-left: 30px;
+  padding-right: 30px;
+}
+#form-student-update .radiobtn{
+  margin-right: 15px;
+}
+#form-student-update #editphoto{
+  border-top: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  width: 100%;
+  margin-top: 28px;
+}
+#form-student-update #edit-img-upload{
+  width: 100%;
+}
+
+#stud-img {
+    position: relative;
+    border: 1px solid #eeeeee;
+}
+#register-student-img-btn {
+    position: absolute;
+    left: 15px;
+    bottom: 0;
+    background-color: #737375;
+}
+.imgbtnwidth{
+    width: 140px;
+}
+
+#search-form input[type="text"] {
+    padding: 6px;
+    outline: none;
+    border: 1px solid #c3c3c3;
+    min-width: 220px;
+}
+#search-form button.btn {
+    outline: 0;
+    padding: 10px;
+    margin-top: -2px;
+    margin-left: -5px;
+    border: 1px solid #c3c3c3;
+}
+
+.footer-pagination ul{
+    margin-top: 0;
+}
+
+/* -------------------------- */
+.mt30 {
+    margin-top: 30px;
+}
+.mb30 {
+    margin-bottom: 30px;
+}
+.p30 {
+    padding: 30px;
+}
+
+.dash-box {
+    padding: 30px;
+    box-shadow: 1px 1px 10px #ddd;
+    border: 1px solid #ddd;
+}
+.dash-box2 {
+    padding: 30px;
+    background-color: white;
+}
+.dash-box3 {
+    background-color: white;
+    box-shadow: 1px 1px 5px #ddd;
+    overflow: hidden;
+}
+.dashboard-transaction h4{
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+.dashboard-transaction input{
+  width: 130px;
+  font-size: 15px;
+  padding: 5px;
+  border: 1px solid #dddddd;
+  outline: none;
+}
+.dashboard-transaction table{
+  margin-bottom: 0;
+}
+.dashboard-transaction .pagination{
+  margin: 15px 0 0;
+}
+
+.student-image{
+  width: 30%;
+  float: left;
+  box-sizing: border-box;
+  padding: 3px;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  margin: 1.6666666%;
+  /*position: relative;*/
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.student-info{
+  position: absolute;
+  z-index: 999;
+  top: 70%;
+  left: 0;
+  width: 250px;
+  background-color: #333;
+  color: #fff;
+  padding: 15px;
+  display: none;
+}
+.student-image:hover .student-info{
+  display: block;
+}
+.img-center{
+  margin: 0 auto 12px;
+}
+
+#school-logo {
+    border: 1px solid #ededed;
+}
+#school-logo-btn{
+    width: 100%;
+    background-color: #555;
+}
+
+
+/* ---------------- Responsive --------------*/
+@media only screen and (max-width : 480px) {
+  .dash-box5,
+  .dash-box {
+    margin-bottom: 15px;
+  }
+  .dashboard-transaction input {
+    width: 100%;
+    margin-top: 5px;
+  }
+  .heading-responsive {
+    padding-top: 20px;
+    padding-left: 15px;
+  }
+  h2.page-header {
+    font-size: 22px;
+    margin: 0 0 5px;
+  }
+}
